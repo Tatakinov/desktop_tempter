@@ -1,0 +1,10 @@
+name,master
+type,shell
+
+sakura.balloon.offsetx,0
+sakura.balloon.offsety,0
+kero.balloon.offsetx,0
+kero.balloon.offsety,0
+
+sakura.seriko.alignmenttodesktop,free
+sakura.balloon.dontmove,1

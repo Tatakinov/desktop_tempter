@@ -1,0 +1,6 @@
+charset,UTF-8
+
+type,ghost
+name,卓上誘技
+directory,desktop_tempter
+
