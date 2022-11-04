@@ -1,5 +1,9 @@
 local Util  = require("talk.game._util")
 
+local function max(a, b)
+  return a > b and a or b
+end
+
 local function find(array, elem)
   for i, v in ipairs(array) do
     if v == elem then
@@ -27,7 +31,7 @@ return {
       local index = __("_Index")
       local player  = board:getPlayers()[index]
       if ref[0] and ref[1] == player:getGhostName() then
-        local bet = board:getCurrentBet()
+        local bet = max(board:getCurrentBet(), board:getBlind())
         local raise = tonumber(ref[3]) or 0
         local actions = player:availableAction(bet)
         local valid = false

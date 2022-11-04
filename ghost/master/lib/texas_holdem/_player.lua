@@ -134,7 +134,7 @@ end
 function M:action(bet)
   self._total_bet = self._total_bet + bet - self._bet
   self._bet = bet
-  if self._bet > self._stack then
+  if self._bet >= self._stack then
     self:allin()
   end
 end

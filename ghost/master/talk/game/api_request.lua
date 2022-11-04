@@ -1,6 +1,10 @@
 local StringBuffer  = require("string_buffer")
 local Event         = require("talk.game._event")
 
+local function max(a, b)
+  return a > b and a or b
+end
+
 local function join(t)
   local tmp = {}
   for _, v in ipairs(t) do
@@ -98,9 +102,10 @@ return {
       local player  = nil
       local str = StringBuffer()
       str:append([[\C]])
+      local t = {}
       for _, v in ipairs(board:enumeratePlayersStartAt()) do
-        if v:getBet() == board:getBlind() then
-          player  = v
+        if v:isPlayable() then
+          table.insert(t, v)
         end
         if v:getGhostName() ~= "user" and v:getBet() > 0 then
           str:append(RaiseOther(Event.NOTIFY, v:getGhostName()))
@@ -109,7 +114,12 @@ return {
           str:append("]")
         end
       end
-      assert(player)
+      assert(#t >= 2)
+      if #t == 2 then
+        player  = t[1]
+      else
+        player  = t[3]
+      end
       local sum = 0
       for _, v in ipairs(board:getPlayers()) do
         sum = sum + v:getBet()
@@ -119,7 +129,11 @@ return {
       str:append(","):append(sum)
       str:append(","):append(board:getCurrentBet())
       str:append(","):append(player:getGhostName())
-      str:append(","):append("bet")
+      if player:getState() == "allin" then
+        str:append(","):append("allin")
+      else
+        str:append(","):append("bet")
+      end
       str:append("]")
       return str
     end,
@@ -152,7 +166,7 @@ return {
       local index = __("_Index")
       local is_preflop  = __("_IsPreFlop")
       local str = StringBuffer()
-      local bet = board:getCurrentBet()
+      local bet = max(board:getCurrentBet(), board:getBlind())
 
       if index then
         local player  = board:getPlayers()[index]

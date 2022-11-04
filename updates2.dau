@@ -35,7 +35,7 @@ ghost/master/descript.txt45e08c2d1bdeffab7eb69d6e547cd914size=420date=2022-11
 ghost/master/index.lua9f9466c7f36873c4da4f56fc1a8f99a7size=1541date=2022-11-03T22:21:15
 ghost/master/kagari.dll4949b0e3bb2493e2833c381385121660size=136192date=2022-11-03T21:44:37
 ghost/master/lib/texas_holdem/_const.lua6065273aec07f6c1b31892d963bc40acsize=315date=2022-11-03T21:44:37
-ghost/master/lib/texas_holdem/_player.lua777341c5debed8c817546e8b67467497size=3291date=2022-11-03T21:44:37
+ghost/master/lib/texas_holdem/_player.lua2eb30f8db1a8b1534d1b2b3d71e286e6size=3292date=2022-11-04T21:45:59
 ghost/master/lib/texas_holdem/_pool.lua90a3a282ee0c33de09e4835ec3f6f338size=597date=2022-11-03T21:44:37
 ghost/master/lib/texas_holdem/init.lua09e795761ae9e4bc418d29a0db5993f7size=5265date=2022-11-03T21:44:37
 ghost/master/lua54.dllca79fc021456352413efee6568d5156bsize=218624date=2022-11-03T21:44:37
@@ -51,8 +51,8 @@ ghost/master/talk/game/_event.luaef3a687cf8d012895ca16c2784ea4dedsize=520date
 ghost/master/talk/game/_hand_util.lua06993d7f9119222e9c27e9c066ee2f45size=3697date=2022-11-03T21:44:37
 ghost/master/talk/game/_render.lua6baf8c5de3ac135da3885a2ed98bba37size=1312date=2022-11-03T21:44:37
 ghost/master/talk/game/_util.lua6b657b47857ece93b101f084df835422size=76date=2022-11-03T21:44:37
-ghost/master/talk/game/api_request.luaa308607b0e28688bafd7d5a2838c2d72size=8208date=2022-11-03T21:44:37
-ghost/master/talk/game/api_response.lua6618bc781771207ad4f8c1c1c89128e1size=3044date=2022-11-03T21:44:37
+ghost/master/talk/game/api_request.luad7d9adf331e24fdeaedf8fb9034ca57dsize=8493date=2022-11-04T21:45:58
+ghost/master/talk/game/api_response.lua4529c6c799389e3f892b3b512b84c55fsize=3123date=2022-11-04T21:45:58
 ghost/master/talk/game/internal.luaad8b62c2a946d6805298371b9cd9e979size=18049date=2022-11-03T21:44:37
 ghost/master/talk/game/misc.luac94af69ed8b57b8e6bfc8fe9573d0332size=1228date=2022-11-03T21:44:37
 ghost/master/talk/game/player.lua6400ab0ae7a59da704b7b4fb4ad507d7size=2908date=2022-11-03T21:44:37
