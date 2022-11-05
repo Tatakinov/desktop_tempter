@@ -1,9 +1,5 @@
 local Util  = require("talk.game._util")
 
-local function max(a, b)
-  return a > b and a or b
-end
-
 local function find(array, elem)
   for i, v in ipairs(array) do
     if v == elem then
@@ -29,9 +25,14 @@ return {
       local __  = shiori.var
       local board = __("_Board")
       local index = __("_Index")
+      local is_preflop  = __("_IsPreFlop")
       local player  = board:getPlayers()[index]
       if ref[0] and ref[1] == player:getGhostName() then
-        local bet = max(board:getCurrentBet(), board:getBlind())
+        local bet = board:getCurrentBet()
+        -- プリフロップでBBのStack < Blindの時にコール額をBlindにする
+        if is_preflop and bet < board:getBlind() then
+          bet = board:getBlind()
+        end
         local raise = tonumber(ref[3]) or 0
         local actions = player:availableAction(bet)
         local valid = false

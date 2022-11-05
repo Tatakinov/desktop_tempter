@@ -166,7 +166,11 @@ return {
       local index = __("_Index")
       local is_preflop  = __("_IsPreFlop")
       local str = StringBuffer()
-      local bet = max(board:getCurrentBet(), board:getBlind())
+      local bet = board:getCurrentBet()
+      -- プリフロップでBBのStack < Blindの時にコール額をBlindにする
+      if is_preflop and bet < board:getBlind() then
+        bet = board:getBlind()
+      end
 
       if index then
         local player  = board:getPlayers()[index]
