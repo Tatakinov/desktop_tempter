@@ -53,8 +53,8 @@ ghost/master/talk/game/_render.lua6baf8c5de3ac135da3885a2ed98bba37size=1312da
 ghost/master/talk/game/_util.lua6b657b47857ece93b101f084df835422size=76date=2022-11-03T21:44:37
 ghost/master/talk/game/api_request.lua4120b0b3bf8eee24d8ed28a7c0dad2a3size=8650date=2022-11-05T20:55:56
 ghost/master/talk/game/api_response.luaad7cabbb45d4030fa174ea8925c0bbabsize=3275date=2022-11-05T20:55:56
-ghost/master/talk/game/internal.luaad8b62c2a946d6805298371b9cd9e979size=18049date=2022-11-03T21:44:37
-ghost/master/talk/game/misc.luac94af69ed8b57b8e6bfc8fe9573d0332size=1228date=2022-11-03T21:44:37
+ghost/master/talk/game/internal.luac4079c2975e0a3db03abcc4b51b593e9size=18671date=2022-11-09T22:29:52
+ghost/master/talk/game/misc.luad6cb3edc7e1a8109f9b2104893b2d58asize=1736date=2022-11-09T22:29:52
 ghost/master/talk/game/player.lua6400ab0ae7a59da704b7b4fb4ad507d7size=2908date=2022-11-03T21:44:37
 ghost/master/talk/misc.lua7056d959b2255237e8045074e3f68859size=89date=2022-11-03T21:44:37
 ghost/master/talk/system/baseware.luab867c6c9c2660998af6b4e37d8ab6412size=2942date=2022-11-03T21:44:37
