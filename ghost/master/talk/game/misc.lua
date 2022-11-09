@@ -5,13 +5,35 @@ return {
     id  = "0Poke",
     content = function(shiori, ref)
       return [[\_q]] .. Render.center({
-        "Sキー: ゲーム開始",
+        "Sキー: ゲーム開始(ユーザーあり)",
+        "Uキー: ゲーム開始(ユーザーなし)",
         "Bキー: ベット(インプットボックスにベット額を入力)",
         "Rキー: レイズ(インプットボックスにベット額を入力)",
         "Aキー: オールイン",
         "Cキー: チェック/コール",
         "Fキー: フォールド",
       }) .. [[\_q]]
+    end,
+  },
+  {
+    id  = "OnNotifySelfInfo",
+    content = function(shiori, ref)
+      local __  = shiori.var
+      __("_ShellName", ref[3])
+    end,
+  },
+  {
+    id  = "OnShellChanged",
+    content = function(shiori, ref)
+      local __  = shiori.var
+      __("_ShellName", ref[0])
+    end,
+  },
+  {
+    -- start game
+    id  = "u_Key",
+    content = function(shiori, ref)
+      return [=[\![raise,OnPokerStartInternal,true]]=]
     end,
   },
   {

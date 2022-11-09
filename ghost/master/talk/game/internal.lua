@@ -61,7 +61,7 @@ local function card2str(suit, num, style)
   end
 end
 
-local function printInfo(board, opt)
+local function printInfo(board, shell, opt)
   opt = opt or {open  = {}}
   local Util  = require("talk.game._util")
   local players = board:getPlayers()
@@ -162,11 +162,26 @@ local function printInfo(board, opt)
     table.insert(t1, card2str(v.suit, v.number, false))
     table.insert(t2, card2str(v.suit, v.number, true))
   end
-  if #t1 > 0 then
-    table.insert(t, {
-      raw = table.concat(t1, " "),
-      str = table.concat(t2, " "),
-    })
+  if shell == "master" then
+    if #t1 > 0 then
+      table.insert(t, {
+        raw = table.concat(t1, " "),
+        str = table.concat(t2, " "),
+      })
+    end
+  elseif shell == "文化祭" then
+    if #t1 > 0 then
+      table.insert(t, {
+        raw = table.concat({t1[1], t1[2], t1[3]}, " "),
+        str = table.concat({t2[1], t2[2], t2[3]}, " "),
+      })
+    end
+    if #t1 > 3 then
+      table.insert(t, {
+        raw = table.concat({"  ", t1[4], t1[5]}, " "),
+        str = table.concat({"  ", t2[4], t2[5]}, " "),
+      })
+    end
   end
   str:append(Render.center(t))
   str:append([[\_q]])
@@ -178,7 +193,7 @@ return {
     id  = "OnPokerStartInternal",
     content = function(shiori, ref)
       local __  = shiori.var
-      shiori:talk("OnPokerInitializeInternal")
+      shiori:talk("OnPokerInitializeInternal", ref[0])
 
       __("_CallbackTimer", {
         start = os.time(),
@@ -198,7 +213,9 @@ return {
       local board = TexasHoldem()
       board:initialize()
       __("_Board", board)
-      board:createPlayer("user", "あなた")
+      if not(ref[0]) then
+        board:createPlayer("user", "あなた")
+      end
       __("_GhostList", {})
       __("_Rank", {})
       __("_MinuteCounter", 0)
@@ -285,7 +302,7 @@ return {
         user  = true,
       }
       __("_HandOpenPlayer", t)
-      return printInfo(board, {open = __("_HandOpenPlayer")}) ..
+      return printInfo(board, __("_ShellName"), {open = __("_HandOpenPlayer")}) ..
           shiori:talk("OnPokerGameRoundStartSend")
     end,
   },
@@ -301,7 +318,7 @@ return {
           t[v:getGhostName()]  = true
         end
       end
-      return printInfo(board, {open  = t}) ..
+      return printInfo(board, __("_ShellName"), {open  = t}) ..
       shiori:talk("OnPokerGameHandSend")
     end,
   },
@@ -325,7 +342,7 @@ return {
       end
       __("_Index", index)
       __("_Received", nil)
-      return printInfo(board, {index = index, open = __("_HandOpenPlayer")}) ..
+      return printInfo(board, __("_ShellName"), {index = index, open = __("_HandOpenPlayer")}) ..
           shiori:talk("OnPokerGameActionSend")
     end,
   },
@@ -395,7 +412,7 @@ return {
         end
       end
       __("_HandOpenPlayer", t)
-      local str = printInfo(board, {open = __("_HandOpenPlayer")})
+      local str = printInfo(board, __("_ShellName"), {open = __("_HandOpenPlayer")})
       board:initFlip()
       if #board:getCards() < 3 then
         __("_CallbackTimer", {
@@ -422,7 +439,7 @@ return {
         return str ..
             shiori:talk("OnPokerGameFlipSend")
       else
-        return printInfo(board, {open = __("_HandOpenPlayer")}) .. [=[\![raise,OnPokerGameShowDownInternal]]=]
+        return printInfo(board, __("_ShellName"), {open = __("_HandOpenPlayer")}) .. [=[\![raise,OnPokerGameShowDownInternal]]=]
       end
     end,
   },
@@ -446,7 +463,7 @@ return {
       end
       __("_HandOpenPlayer", t)
 
-      return printInfo(board, {open = __("_HandOpenPlayer"), show_down = true}) ..
+      return printInfo(board, __("_ShellName"), {open = __("_HandOpenPlayer"), show_down = true}) ..
           shiori:talk("OnPokerGameShowDownSend")
     end,
   },
@@ -484,7 +501,7 @@ return {
             name    = players[1]:getGhostName(),
           },
         })
-        return printInfo(board, {
+        return printInfo(board, __("_ShellName"), {
           winner = __("_Winner"),
           open  = {user = true},
         })
@@ -550,7 +567,7 @@ return {
         end
         __("_HandOpenPlayer", t)
 
-        return printInfo(board, {winner = max, open = __("_HandOpenPlayer"), show_down = true})
+        return printInfo(board, __("_ShellName"), {winner = max, open = __("_HandOpenPlayer"), show_down = true})
       end
     end,
   },
