@@ -37,7 +37,7 @@ ghost/master/kagari.dll4949b0e3bb2493e2833c381385121660size=136192date=2022-1
 ghost/master/lib/texas_holdem/_const.lua6065273aec07f6c1b31892d963bc40acsize=315date=2022-11-03T21:44:37
 ghost/master/lib/texas_holdem/_player.lua2eb30f8db1a8b1534d1b2b3d71e286e6size=3292date=2022-11-04T21:45:59
 ghost/master/lib/texas_holdem/_pool.lua90a3a282ee0c33de09e4835ec3f6f338size=597date=2022-11-03T21:44:37
-ghost/master/lib/texas_holdem/init.lua09e795761ae9e4bc418d29a0db5993f7size=5265date=2022-11-03T21:44:37
+ghost/master/lib/texas_holdem/init.luaeef63347f9c358cb2aff147529064c60size=5393date=2022-11-27T22:02:48
 ghost/master/lua54.dllca79fc021456352413efee6568d5156bsize=218624date=2022-11-03T21:44:37
 ghost/master/replace.confdb5c7463d42cb5002d071181c6eafe58size=113date=2022-11-03T21:44:37
 ghost/master/saori.conf68b329da9893e34099c7d8ad5cb9c940size=1date=2022-11-03T21:44:37
@@ -53,12 +53,12 @@ ghost/master/talk/game/_render.lua6baf8c5de3ac135da3885a2ed98bba37size=1312da
 ghost/master/talk/game/_util.lua6b657b47857ece93b101f084df835422size=76date=2022-11-03T21:44:37
 ghost/master/talk/game/api_request.lua4120b0b3bf8eee24d8ed28a7c0dad2a3size=8650date=2022-11-05T20:55:56
 ghost/master/talk/game/api_response.luaad7cabbb45d4030fa174ea8925c0bbabsize=3275date=2022-11-05T20:55:56
-ghost/master/talk/game/internal.luac4079c2975e0a3db03abcc4b51b593e9size=18671date=2022-11-09T22:29:52
-ghost/master/talk/game/misc.luad6cb3edc7e1a8109f9b2104893b2d58asize=1736date=2022-11-09T22:29:52
+ghost/master/talk/game/internal.lua406681b062744811340d6ec4031dbcf8size=18705date=2022-11-27T22:02:48
+ghost/master/talk/game/misc.lua40866084db402221f2b0a2d9ac6e537asize=3311date=2022-11-27T22:02:48
 ghost/master/talk/game/player.lua6400ab0ae7a59da704b7b4fb4ad507d7size=2908date=2022-11-03T21:44:37
 ghost/master/talk/misc.lua7056d959b2255237e8045074e3f68859size=89date=2022-11-03T21:44:37
 ghost/master/talk/system/baseware.luab867c6c9c2660998af6b4e37d8ab6412size=2942date=2022-11-03T21:44:37
-ghost/master/talk/system/debug.luab8db3f11d7c8bf87383653bced4f413csize=806date=2022-11-03T21:44:37
+ghost/master/talk/system/debug.luad8f75714167d19fbcf9f862a08a74fb1size=806date=2022-11-27T22:02:48
 ghost/master/talk/system/notify.luac7d45b3208d0a7d77152e2902c03dacasize=1947date=2022-11-03T21:44:37
 install.txtaaf2a65fd6e9ec6fd8616a71493b4255size=77date=2022-11-03T21:44:37
 shell/master/descript.txt3c77397de5909c0a9d69ee9f11030d1esize=195date=2022-11-03T21:44:37
