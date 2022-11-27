@@ -14,6 +14,15 @@ local function prevPlayer(index, size)
   return (index + (size - 2)) % size + 1
 end
 
+function M:_init(stack, blind)
+  if stack then
+    Const.STACK = stack
+  end
+  if blind then
+    Const.BLIND = blind
+  end
+end
+
 function M:initialize()
   self._players = {}
   self._blind   = Const.BLIND

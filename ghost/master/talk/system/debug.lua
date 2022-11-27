@@ -8,7 +8,7 @@ return {
     end,
   },
   {
-    id  = "p_Key",
+    id  = "l_Key",
     content = [[
 \![reload,shiori]
 ]],

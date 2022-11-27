@@ -210,7 +210,7 @@ return {
     id  = "OnPokerInitializeInternal",
     content = function(shiori, ref)
       local __  = shiori.var
-      local board = TexasHoldem()
+      local board = TexasHoldem(__("StackBegin"), __("BlindBegin"))
       board:initialize()
       __("_Board", board)
       if not(ref[0]) then

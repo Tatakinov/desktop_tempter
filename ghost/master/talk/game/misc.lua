@@ -12,6 +12,7 @@ return {
         "Aキー: オールイン",
         "Cキー: チェック/コール",
         "Fキー: フォールド",
+        "Pキー: 設定",
       }) .. [[\_q]]
     end,
   },
@@ -66,6 +67,69 @@ return {
       else
         __("_MinuteCounter", m)
       end
+    end,
+  },
+  {
+    id  = "p_Key",
+    content = [[
+\0
+\![raise,OnPreference]
+]],
+  },
+  {
+    id  = "OnPreference",
+    content = function(shiori, ref)
+      local __  = shiori.var
+      local stack = __("StackBegin") or 2000
+      local stack_raw = string.format("Stack %d 【変更】", stack)
+      local stack_str = string.format("Stack %d 【\\q[変更,OnPreferenceInputStack]】", stack)
+      local blind = __("BlindBegin") or 20
+      local blind_raw = string.format("Blind %d 【変更】", blind)
+      local blind_str = string.format("Blind %d 【\\q[変更,OnPreferenceInputBlind]】", blind)
+      return [[\_q]] .. Render.center({
+        {
+          raw = stack_raw,
+          str = stack_str,
+        },
+        {
+          raw = blind_raw,
+          str = blind_str,
+        },
+      }) .. [[\_q]]
+    end,
+  },
+  {
+    id  = "OnPreferenceInputStack",
+    content = [[
+\C\![open,inputbox,OnPreferenceChangeStack]
+]],
+  },
+  {
+    id  = "OnPreferenceChangeStack",
+    content = function(shiori, ref)
+      local __  = shiori.var
+      local n = tonumber(ref[0]) or 0
+      if n > 0 then
+        __("StackBegin", n)
+      end
+      return "\\![raise,OnPreference]"
+    end,
+  },
+  {
+    id  = "OnPreferenceInputBlind",
+    content = [[
+\C\![open,inputbox,OnPreferenceChangeBlind]
+]],
+  },
+  {
+    id  = "OnPreferenceChangeBlind",
+    content = function(shiori, ref)
+      local __  = shiori.var
+      local n = tonumber(ref[0]) or 0
+      if n > 0 then
+        __("BlindBegin", n)
+      end
+      return "\\![raise,OnPreference]"
     end,
   },
 }
