@@ -15,7 +15,7 @@ ghost/master/corelib/sakura_script/init.lua80693100417e88d13cd6bfe873fb1047siz
 ghost/master/corelib/sakura_script/render.lua79c8e753d71af2d8aad5cf9369858e77size=303date=2022-11-03T21:44:37
 ghost/master/corelib/sakura_script/shape.lua4db1c4b374122cc6a6e28af2aa0478bfsize=297date=2022-11-03T21:44:37
 ghost/master/corelib/saori_basic/init.luab7266efb6309a85334f986aa8ade091fsize=1045date=2022-11-03T21:44:37
-ghost/master/corelib/saori_caller/init.luaa1c17b03914cfc8f86f270a5d0b96b4fsize=2203date=2022-11-03T21:44:37
+ghost/master/corelib/saori_caller/init.luab38d33e9bf0aef89b1294bddb0db69absize=1622date=2023-04-01T22:02:08
 ghost/master/corelib/saori_universal/init.lua35e35d946177cfdf5d65aa295f5788f8size=1956date=2022-11-03T21:44:37
 ghost/master/corelib/saori_universal/native.dll67f53c611ca874d512cf85786fa521c7size=171008date=2022-11-03T21:44:37
 ghost/master/corelib/string_buffer/init.luad6d9775a27dd764e0bd23e50f952d0a5size=931date=2022-11-03T21:44:37
@@ -33,6 +33,7 @@ ghost/master/corelib/ukagaka_module/shiori/init.luafd2117671eb142c1cab176d82549
 ghost/master/corelib/ukagaka_module/shiori/protocol.lua0b75174e913e48096624745b2009a284size=102date=2022-11-03T21:44:37
 ghost/master/descript.txt45e08c2d1bdeffab7eb69d6e547cd914size=420date=2022-11-03T21:44:37
 ghost/master/index.lua9f9466c7f36873c4da4f56fc1a8f99a7size=1541date=2022-11-03T22:21:15
+ghost/master/kagari.conf.lua21a0481705e1df0fa47d4bdf3b288bc2size=92date=2023-04-01T22:02:08
 ghost/master/kagari.dll4949b0e3bb2493e2833c381385121660size=136192date=2022-11-03T21:44:37
 ghost/master/lib/texas_holdem/_const.lua6065273aec07f6c1b31892d963bc40acsize=315date=2022-11-03T21:44:37
 ghost/master/lib/texas_holdem/_player.lua2eb30f8db1a8b1534d1b2b3d71e286e6size=3292date=2022-11-04T21:45:59
@@ -41,8 +42,9 @@ ghost/master/lib/texas_holdem/init.luaeef63347f9c358cb2aff147529064c60size=539
 ghost/master/lua54.dllca79fc021456352413efee6568d5156bsize=218624date=2022-11-03T21:44:37
 ghost/master/replace.confdb5c7463d42cb5002d071181c6eafe58size=113date=2022-11-03T21:44:37
 ghost/master/saori.conf68b329da9893e34099c7d8ad5cb9c940size=1date=2022-11-03T21:44:37
+ghost/master/shiori/config.luab16ab4f641e368713b8d57702a6e8b08size=737date=2023-04-01T22:02:08
 ghost/master/shiori/i18n.lua503d09a7e28874f9bcc1c3a4b4b84e0dsize=430date=2022-11-03T21:44:37
-ghost/master/shiori/init.lua6bb972a595a582962cb37b3447df0293size=10836date=2022-11-03T21:44:37
+ghost/master/shiori/init.lua573117ce13513e2d6a2555adb16e6515size=11150date=2023-04-01T22:02:08
 ghost/master/shiori/misc.lua1e62a73bb8081b46da563dda8c06e486size=3079date=2022-11-03T21:44:37
 ghost/master/shiori/talk.lua6dc22bcd43cb9c6253152a0b5a622d36size=571date=2022-11-03T21:44:37
 ghost/master/shiori/variable.luad6d8352da059d0a00296b9928a783fc2size=1205date=2022-11-03T21:44:37
